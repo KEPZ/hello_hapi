@@ -1,14 +1,8 @@
-#!/usr/bin/env groovy
+#!/usr/bin/env bash
 
 pipeline {
 
-    agent {
-        docker {
-            image 'node'
-            args '-u root'
-        }
-    }
-
+    agent any
     stages {
         stage('Build') {
             steps {
